@@ -1,0 +1,26 @@
+{
+  "meta": {
+    "version": "0.0.1",
+    "last_modified": "03-09-2-18"
+  },
+  "account_data": {
+    "member_count": 10,
+    "accounts": [
+      {
+        "name": "eiji03aero",
+        "password": "aeropro2",
+        "profile": "i have been studying man"
+      },
+      {
+        "name": "taguchi",
+        "password": "dot1",
+        "profile": "I am the leading instructor at dot_install"
+      },
+      {
+        "name": "fkoji",
+        "password": "dot2",
+        "profile": "I am the man with riddle"
+      }
+    ]
+  }
+}

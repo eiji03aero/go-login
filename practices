@@ -1,0 +1,48 @@
+func GetAccounts (path string) {
+  file, err := os.Open(path)
+  if err != nil {
+    fmt.Println("you are fucked up with opening up the accounts file man")
+    fmt.Println("Error: ", err)
+    return
+  }
+
+  fmt.Println("successed!!")
+  buf := make([]byte, BUFSIZE)
+  for {
+    n, err := file.Read(buf)
+    if n== 0 {
+      fmt.Println("you finished it man")
+      break;
+    }
+    if err != nil {
+      fmt.Println("you got an error")
+      fmt.Println(err)
+      break
+    }
+
+    fmt.Print(string(buf[:n]))
+  }
+}
+
+
+{
+  Name:    "hello",
+  Aliases: []string{"he"},
+  Usage:   "Display notorious hello world",
+  Action:  helloAction,
+},
+
+func helloAction(c *cli.Context) {
+
+	var isDry = c.GlobalBool("dryrun")
+	if isDry {
+		fmt.Println("this is dry-run")
+	}
+
+	var paramFirst = ""
+	if len(c.Args()) > 0 {
+		paramFirst = c.Args().First()
+	}
+
+	fmt.Printf("Hello world! %s\n", paramFirst)
+}
