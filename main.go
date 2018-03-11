@@ -14,13 +14,6 @@ func main() {
 	app.Usage = "demo version of login feature"
 	app.Version = "0.0.1"
 
-	app.Flags = []cli.Flag{
-		cli.BoolFlag{
-			Name:  "dryrun, d",
-			Usage: "Global option dryrun",
-		},
-	}
-
 	app.Commands = []cli.Command{
 		{
 			Name:    "user",

@@ -10,7 +10,7 @@ import (
 )
 
 func UserController(c *cli.Context) {
-	fmt.Println("Please select what you wanna do!!")
+	fmt.Println("Please select what you wanna do!! ctrl-i to select option")
 	fmt.Println("Available Actions: [index, search, quit]")
 	userInput := prompt.Input(">> ", userControllerCompleter)
 

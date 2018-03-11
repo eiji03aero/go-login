@@ -9,7 +9,7 @@ import (
 	"github.com/urfave/cli"
 )
 
-func ShowAllAccounts(c *cli.Context) bool {
+func ShowAllAccounts(c *cli.Context) (cont bool) {
 	accounts := db.GetAllAccounts()
 
 	for i, a := range accounts {
@@ -22,8 +22,8 @@ func ShowAllAccounts(c *cli.Context) bool {
 	return true
 }
 
-func SearchAccounts(c *cli.Context) bool {
-	var cont bool
+func SearchAccounts(c *cli.Context) (cont bool) {
+	var _cont bool
 	fmt.Println("Type the name of the user that you wanna search...")
 	userInput := prompt.Input(">> ", util.DefaultCompleter)
 
@@ -32,14 +32,14 @@ func SearchAccounts(c *cli.Context) bool {
 	if account, err := db.GetAccount(string(userInput)); err != true {
 		fmt.Println("========== Here comes the hero!! ==========")
 		account.Introduce()
-		cont = true
+		_cont = true
 	} else {
 		fmt.Printf("No such account found man! [%v]\n", userInput)
-		cont = false
+		_cont = false
 	}
 
 	util.NewLine()
 	util.WaitMS(200)
 
-	return cont
+	return _cont
 }

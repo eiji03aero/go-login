@@ -46,3 +46,10 @@ func helloAction(c *cli.Context) {
 
 	fmt.Printf("Hello world! %s\n", paramFirst)
 }
+
+app.Flags = []cli.Flag{
+  cli.BoolFlag{
+    Name:  "dryrun, d",
+    Usage: "Global option dryrun",
+  },
+}
