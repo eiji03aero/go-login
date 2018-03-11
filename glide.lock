@@ -1,0 +1,22 @@
+hash: af5b23cab22c6169b8521b92fa554cf2c6ffd62d1b3726d92c33206bf8b99ba9
+updated: 2018-03-11T15:40:37.645301+09:00
+imports:
+- name: github.com/c-bata/go-prompt
+  version: e99fbc797b795e0a7a94affc8d44f6a0350d85f0
+- name: github.com/mattn/go-colorable
+  version: efa589957cd060542a26d2dd7832fd6a6c6c3ade
+- name: github.com/mattn/go-isatty
+  version: 6ca4dbf54d38eea1a992b3c722a76a5d1c4cb25c
+- name: github.com/mattn/go-tty
+  version: 931426f7535ac39720c8909d70ece5a41a2502a6
+- name: github.com/pkg/term
+  version: b1f72af2d63057363398bec5873d16a98b453312
+  subpackages:
+  - termios
+- name: github.com/urfave/cli
+  version: cfb38830724cc34fedffe9a2a29fb54fa9169cd1
+- name: golang.org/x/sys
+  version: 7dca6fe1f43775aa6d1334576870ff63f978f539
+  subpackages:
+  - unix
+testImports: []
